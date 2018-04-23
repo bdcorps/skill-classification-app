@@ -8,11 +8,8 @@
 		<!-- For now I am using Bootstrap 3 cdn link. Feel free to use Bootstrap 4 by replacing the link below -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+		<link rel="stylesheet" type="text/css" href="css/index.css">
 	</head>
-
-
-
 
 	<body>
 		<nav class='navbar navbar-expand-sm navbar-custom'>
@@ -50,12 +47,13 @@
 				<h1>Survey App</h1>
 			</div>
 
-<h2>AI</h2>
+			<h2>AI</h2>
 
 			<form id='myForm'>
-				<div class='d-flex flex-row justify-content-around'>
+				<!-- <div class='d-flex flex-row justify-content-around'> -->
+				<div class='row align-items-end'>
 					<!-- Discovery -->
-					<div class='form-group'>
+					<div class='form-group col-lg'>
 						<label for='watsonDiscovery'>How proficient are you in Watson Discovery?</label>
 						<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
 						<div class="input-group plus-minus-input">
@@ -71,10 +69,10 @@
 								</button>
 							</div>
 						</div>
-					</div><!-- form-group -->
+					</div><!-- Watson Discovery -->
 					<!-- Random -->
-					<div class='form-group'>
-						<label for='watsonDiscovery'>How proficient are you in Watson Conversation?</label>
+					<div class='form-group col-lg'>
+						<label for='watsonConversation'>How proficient are you in Watson Conversation?</label>
 						<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
 						<div class="input-group plus-minus-input">
 							<div class="input-group-button">
@@ -89,9 +87,9 @@
 								</button>
 							</div>
 						</div>
-					</div><!-- form-group -->
-						<!-- Random -->
-					<div class='form-group'>
+					</div><!-- Watson Conversation -->
+					<!-- Watson Tone Analyzer -->
+					<div class='form-group col-lg'>
 						<label for='watsonToneAnalyzer'>How proficient are you in Watson Tone Analyzer?</label>
 						<div class="input-group plus-minus-input">
 							<div class="input-group-button">
@@ -106,13 +104,14 @@
 								</button>
 							</div>
 						</div>
-					</div>
-</div>
+					</div><!-- Watson Tone Analyzer -->
+				</div><!-- d-flex -->
 
-<h2>Cloud</h2>
+				<h2>Cloud</h2>
 
-<div class='d-flex flex-row justify-content-around'>
-	<div class='form-group'>
+				<!-- <div class='d-flex flex-row justify-content-around'> -->
+				<div class='row align-items-end'>
+					<div class='form-group col-lg'>
 						<label for='virtual-compute'>How proficient are you in Virtual Compute?</label>
 						<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
 						<div class="input-group plus-minus-input">
@@ -130,7 +129,7 @@
 						</div>
 					</div>
 
-<div class='form-group'>
+					<div class='form-group col-lg'>
 						<label for='virtual-compute'>VM?</label>
 						<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
 						<div class="input-group plus-minus-input">
@@ -146,9 +145,11 @@
 								</button>
 							</div>
 						</div>
-					</div>
+					</div><!-- VM -->
 
-					<div class='form-group'>
+					<div class='w-100'></div>
+					<!-- Bare Metal -->
+					<div class='form-group col-lg'>
 						<label for='virtual-compute'>Bare Metal?</label>
 						<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
 						<div class="input-group plus-minus-input">
@@ -164,10 +165,11 @@
 								</button>
 							</div>
 						</div>
-					</div>
+					</div> <!-- Bare Metal-->
 
-	<div class='form-group'>
-						<label for='virtual-compute'>vmware?</label>
+					<div class='form-group col-lg'>
+						<!-- VMWare -->
+						<label for='virtual-compute'>VMWare?</label>
 						<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
 						<div class="input-group plus-minus-input">
 							<div class="input-group-button">
@@ -182,14 +184,14 @@
 								</button>
 							</div>
 						</div>
-					</div>
+					</div><!-- VMWare -->
+				</div><!-- d-flex -->
 
 
-</div>
-
-
-<div class='d-flex flex-row justify-content-around'>
-	<div class='form-group'>
+				<!-- <div class='d-flex flex-row justify-content-around'> -->
+				<div class='row align-items-end'>
+					<!-- Virtual Storage -->
+					<div class='form-group col-lg'>
 						<label for='virtual-storage'>How proficient are you in Virtual Storage?</label>
 						<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
 						<div class="input-group plus-minus-input">
@@ -205,9 +207,9 @@
 								</button>
 							</div>
 						</div>
-					</div><!-- form-group -->
+					</div><!-- Virtual Storage -->
 
-	<div class='form-group'>
+					<div class='form-group col-lg'>
 						<label for='virtual-storage'>Block</label>
 						<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
 						<div class="input-group plus-minus-input">
@@ -223,9 +225,12 @@
 								</button>
 							</div>
 						</div>
-					</div><!-- form-group -->
+					</div><!-- Block -->
 
-					<div class='form-group'>
+					<div class='w-100'></div>
+
+					<!-- Object -->
+					<div class='form-group col-lg'>
 						<label for='virtual-storage'>Object</label>
 						<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
 						<div class="input-group plus-minus-input">
@@ -241,10 +246,10 @@
 								</button>
 							</div>
 						</div>
-					</div>
-
-					<div class='form-group'>
-						<label for='virtual-storage'>File</label>
+					</div> <!-- Virtual Storage -->
+					<!-- File -->
+					<div class='form-group col-lg'>
+						<label for='file'>File</label>
 						<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
 						<div class="input-group plus-minus-input">
 							<div class="input-group-button">
@@ -259,10 +264,12 @@
 								</button>
 							</div>
 						</div>
-					</div>
-</div>
+					</div><!-- File-->
+				</div><!-- d-flex -->
 
-	<div class='form-group'>
+				<!-- <div class='d-flex flex-row justify-content-around'> -->
+				<div class='row'>
+					<div class='form-group col-lg'>
 						<label for='virtual-network'>How proficient are you in Virtual Network?</label>
 						<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
 						<div class="input-group plus-minus-input">
@@ -278,10 +285,10 @@
 								</button>
 							</div>
 						</div>
-					</div><!-- form-group -->
+					</div><!-- Virtual Network -->
 
-							<div class='form-group'>
-						<label for='virtual-storage'>Public</label>
+					<div class='form-group col-lg'>
+						<label for='public'>Public</label>
 						<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
 						<div class="input-group plus-minus-input">
 							<div class="input-group-button">
@@ -296,11 +303,10 @@
 								</button>
 							</div>
 						</div>
-					</div>
-
-
-							<div class='form-group'>
-						<label for='virtual-storage'>Private</label>
+					</div><!-- Public -->
+					<!-- Private -->
+					<div class='form-group col-lg'>
+						<label for='private'>Private</label>
 						<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
 						<div class="input-group plus-minus-input">
 							<div class="input-group-button">
@@ -315,20 +321,14 @@
 								</button>
 							</div>
 						</div>
-					</div>
-</div>
-
-
-
-
-
-	</div>
+					</div><!-- Private -->
 				</div><!-- d-flex -->
+				
 				<div class='d-flex'>
-					<button class='ml-auto mr-5 my-5 skillSubmitButton'>Submit</button>
+					<button class='myBtn ml-auto mr-5 my-5 skillSubmitButton'>Submit</button>
 				</div>
-			</form>
-		</div>
+			</form><!-- myForm -->
+		</div><!-- container-fluid -->
 
 
 

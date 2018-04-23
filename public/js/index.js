@@ -6,13 +6,13 @@ $(document).ready(function() {
 		fieldName = $(this).attr('data-field');
 		// Get its current value
 		var currentVal = parseInt($('input[name=' + fieldName + ']').val());
-		// If is not undefined
-		if (!isNaN(currentVal)) {
+		// If is not undefined AND under 10
+		if (!isNaN(currentVal) && currentVal < 10) {
 			// Increment
 			$('input[name=' + fieldName + ']').val(currentVal + 1);
-		} else {
-			// Otherwise put a 0 there
-			$('input[name=' + fieldName + ']').val(0);
+		// } else {
+		// 	// Otherwise put a 0 there
+		// 	$('input[name=' + fieldName + ']').val(0);
 		}
 	});
 	// This button will decrement the value till 0
@@ -49,8 +49,8 @@ $(document).ready(function() {
 		$.ajax({
 			url: '/submitskills',
 			type: 'POST',
-			 contentType: 'application/json',
-data: JSON.stringify(values),
+			contentType: 'application/json',
+			data: JSON.stringify(values),
 			success: function(res) {
 
 			}
